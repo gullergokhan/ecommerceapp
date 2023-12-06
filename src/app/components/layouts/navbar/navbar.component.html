@@ -1,0 +1,25 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand ms-4" href="/">Gökhan GÜLLER</a>
+  <div class="collapse navbar-collapse justify-content-end me-4" id="navbarNav">
+    <ul class="navbar-nav">
+     
+      <li class="nav-item">
+        <a class="nav-link" href="/products" routerLinkActive="active">Products</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/products-edit" routerLinkActive="active">Products Edit</a>
+      </li>
+    
+    </ul>
+  </div>
+  <!-- <ol class="breadcrumb ms-lg-4 me-4 mb-0">
+    <li class="breadcrumb-item"><a href="/">Ana Sayfa</a></li>
+    <li class="breadcrumb-item active" *ngIf="title != 'Ana Sayfa'" aria-current="page">{{ title }}</li>
+  </ol> -->
+  <button class="btn btn-outline-success position-relative">
+    <i class="fa-solid fa-cart-shopping"></i>            
+    <span class="position-absolute top-0 start-10 translate-middle badge rounded-pill bg-danger">
+      <span>{{ basketCount$ | async }}</span>
+    </span>
+  </button>  
+</nav>

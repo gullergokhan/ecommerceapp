@@ -1,0 +1,32 @@
+<div class="card mt-4">
+    <div id="topTenCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-touch="false">
+      <div class="carousel-inner" style="text-align: center;">
+        <div class="carousel-item active">
+          <div class="d-flex justify-content-center">
+            <ng-container *ngFor="let product of randomProducts; let i = index">
+              <a [routerLink]="'/products/' + product.id">
+                <div class="carousel-item-single" *ngIf="i < 5">
+                  <img [src]="product.image" alt="Product Image" class="d-block w-100" style="max-width: 100%; height: auto;">
+                  <span class="top-film-order">{{ i + 1 }}</span>
+                </div>
+              </a>
+            </ng-container>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="d-flex justify-content-center">
+            <ng-container *ngFor="let product of randomProducts; let i = index">
+              <a [routerLink]="'/products/' + product.id">
+                <div class="carousel-item-single" *ngIf="i >= 5 && i < 10">
+                  <img [src]="product.image" alt="Product Image" class="d-block w-100" style="max-width: 100%; height: auto;">
+                  <span class="top-film-order">{{ i + 1 }}</span>
+                </div>
+              </a>
+            </ng-container>
+          </div>
+        </div>
+      </div>
+     
+    </div>
+  </div>
+  

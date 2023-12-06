@@ -118,12 +118,19 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.css",
+              "node_modules/ngx-toastr/toastr.css",
+              "node_modules/ngx-spinner/animations/ball-clip-rotate.css",
+              "node_modules/aos/dist/aos.css",
+              "node_modules/angular-toastify/dist/angular-toastify.min.css"
             ],
             "scripts": []
           }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "e1760ccf-38fe-4f61-81fa-be9969a7d08d"
   }
 }

@@ -1,0 +1,16 @@
+.form-control::placeholder {
+    color: #0296E5; 
+}
+.no-result-image {
+    display: block; 
+    margin: auto; 
+    width: 200px; 
+    height: auto; 
+  }
+  .alert.alert-warning {
+    background-color: transparent; 
+    border: 1px solid #0296E5; 
+  }
+  .alert.alert-warning p {
+    color: #0296E5; 
+  }

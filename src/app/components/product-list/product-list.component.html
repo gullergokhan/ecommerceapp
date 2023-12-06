@@ -1,0 +1,46 @@
+<app-blank title="Ürünler" sectionTitle="Ürün Listesi"></app-blank>
+<app-loading-spinner *ngIf="isLoading" />
+
+<div *ngIf="isError" class="alert alert-danger text-center my-4" role="alert">
+  Bağlantı Hatası
+</div>
+
+<section *ngIf="!isLoading && products.length > 0">
+ 
+
+ 
+  <input
+    class="form-control p-2 d-flex w-125 my-4"
+    type="text"
+    [placeholder]="'Burayı Kullanarak Arama Yapabilirsiniz' "
+    [(ngModel)]="listFilter"
+  />
+
+  <div
+    data-aos="fade-up"
+    data-aos-duration="2000"
+    *ngFor="let item of filteredProducts; let i = index"
+    class="container mb-4"
+  >
+    <h3 *ngIf="item.totalProducts > 0" class="h3 mb-2">
+      {{ item.categoryName  }} ({{ item.totalProducts }})
+    </h3>
+
+    <div
+      *ngIf="item.totalProducts > 0"
+      class="row row-cols-sm-1 row-cols-md-2 row-cols-lg-3 g-3"
+    >
+      <div *ngFor="let product of item.products" class="col">
+        <app-product-item [product]="product" />
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="isNotFoundProducts" class="alert alert-warning" role="alert">
+    <p class="text-center m-0 fs-5">
+      Ürün bulunamadı
+      <img src="assets/no-result.jpg" alt="No result found" class="no-result-image">
+
+    </p>
+  </div>
+</section>

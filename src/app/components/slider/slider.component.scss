@@ -1,0 +1,45 @@
+.carousel-item-single {
+    margin-right: 0.7em;
+  }
+  
+  .carousel-item-single img {
+    margin-top: 1.6em;
+    margin-left: 1.6em;
+    margin-right: 1.6em;
+    width: 100%;
+    height: auto;
+    max-width: 380px; 
+    max-height: 400px; 
+    margin-bottom: -2em;
+    border: none; 
+  }
+  
+  @media (max-width: 768px) {
+    .carousel-item-single {
+      margin-right: 1.6em;
+    }
+  }
+  
+  .top-film-order {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.8em;
+    bottom: 10px; 
+    padding: 5px 10px;
+    left: 10px; 
+    color: #242A32;
+    transform: translateX(-50%);
+    z-index: -1;
+    text-shadow: 
+      2px 2px 2px #0296E5,
+      -2px -2px 2px #0296E5,
+      2px -2px 2px #0296E5,
+      -2px 2px 2px #0296E5;
+  }
+
+  
+  #topTenCarousel {
+    background-color: #242A32; 
+    box-shadow:  2px 2px #0296E5, -2px -2px 2px #0296E5, 2px -2px 2px #0296E5, -2px 2px 2px #0296E5;
+  }
+  
